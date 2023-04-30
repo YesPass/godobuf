@@ -1845,7 +1845,7 @@ class Translator:
 						return_type = " -> " + gd_type
 					elif field_table[i].field_type == Analysis.FIELD_TYPE.MESSAGE:
 						return_type = " -> " + the_class_name
-					text += tabulate("func add_empty_" + f.name + "()" + return_type + ":\n", nesting)
+					text += tabulate("func add_empty_" + f.name + "() -> Object :\n", nesting)
 					nesting += 1
 					text += generate_group_clear(field_index, nesting)
 					text += tabulate("var element = " + the_class_name + ".new()\n", nesting)
